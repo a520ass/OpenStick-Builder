@@ -16,9 +16,12 @@ rm -f "/etc/locale.gen"
 apt update -qqy
 apt upgrade -qqy --with-new-pkgs
 apt install -qqy --no-install-recommends \
+    build-essential \
     dnsmasq \
     libconfig9 \
     libconfig-dev \
+    libc6-dev \
+    linux-libc-dev \
     locales \
     modemmanager \
     netcat-openbsd \
