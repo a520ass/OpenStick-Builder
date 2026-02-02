@@ -53,7 +53,8 @@ apk add --no-cache \
     wireguard-tools \
     wireguard-tools-wg-quick \
     wpa_supplicant \
-    shadow
+    shadow \
+    wireless-regdb
 "
 # setup alpine
 chroot ${CHROOT} ash -l -c "
