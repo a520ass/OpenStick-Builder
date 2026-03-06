@@ -26,6 +26,7 @@ apt install -qqy --no-install-recommends \
     locales \
     modemmanager \
     netcat-traditional \
+    systemd-resolved \
     network-manager \
     openssh-server \
     qrtr-tools \
