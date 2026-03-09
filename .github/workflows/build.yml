@@ -1,4 +1,4 @@
-name: Builddebug
+name: Build
 
 on:
   repository_dispatch:
