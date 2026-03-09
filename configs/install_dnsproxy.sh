@@ -15,8 +15,8 @@ ARGS="--listen 0.0.0.0 --listen :: --port 5353 \
 echo "Fetching the latest release information..."
 LATEST_TAG=$(curl -s "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 if [ -z "$LATEST_TAG" ]; then
-    echo "Failed to fetch the latest release tag. Exiting."
-    exit 1
+    echo "Failed to fetch the latest release tag. use v0.79.0."
+    LATEST_TAG="v0.79.0"
 fi
 
 # Detect system architecture
