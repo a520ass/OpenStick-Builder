@@ -1,7 +1,13 @@
 name: Build debug
 
 on:
+  repository_dispatch:
   workflow_dispatch:
+    inputs:
+      set_git_user:
+        description: "a520ass"
+        required: true
+        default: "a520ass"
 
 permissions:
   contents: write
