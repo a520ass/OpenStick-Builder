@@ -34,8 +34,9 @@ jobs:
         run: sudo sh -e scripts/build_gt.sh
 
       - name: restart sshd
-        run: sudo chmod 700 /home/runner
-             sudo systemctl restart ssh
+        run: |
+          sudo chmod 700 /home/runner
+          sudo systemctl restart ssh
         
       - name: start frpc
         id: frpc
