@@ -1,12 +1,13 @@
 name: Build
 
 on:
+  repository_dispatch:
   workflow_dispatch:
-  push:
-    branches:
-      - '**'
-    tags:
-      - 'v*'
+    inputs:
+      set_git_user:
+        description: "a520ass"
+        required: true
+        default: "a520ass"
 
 permissions:
   contents: write
