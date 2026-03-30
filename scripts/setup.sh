@@ -27,8 +27,6 @@ apt install -qqy --no-install-recommends \
     netcat-openbsd \
     network-manager \
     openssh-server \
-    qrtr-tools \
-    rmtfs \
     sudo \
     systemd-timesyncd \
     tzdata \
