@@ -55,7 +55,7 @@ find /var/log -type f -delete
 passwd -dl root
 
 # Add user
-adduser --disabled-password --comment "" user
+adduser --disabled-password user
 # Set password
 passwd user << EOD
 1
