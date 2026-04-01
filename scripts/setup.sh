@@ -43,6 +43,10 @@ apt install -qqy --no-install-recommends \
     rfkill \
     hostapd
 
+# install deb
+dpkg -i /root/*.deb
+rm -rf /root/*.deb
+
 # Cleanup in one go
 apt autoremove -qqy
 apt clean
@@ -102,7 +106,7 @@ systemctl enable hostapd
 
 # Make sure ModemManager is enabled for LTE
 systemctl enable ModemManager
-##systemctl enable rmtfs # unsure if needed i forgot why i added it. But builds take a long time so i don't want to remove it now
+systemctl enable rmtfs # unsure if needed i forgot why i added it. But builds take a long time so i don't want to remove it now
 
 # Time
 systemctl enable systemd-timesyncd

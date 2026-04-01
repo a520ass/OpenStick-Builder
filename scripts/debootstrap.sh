@@ -52,6 +52,9 @@ cp configs/99-custom.conf ${CHROOT}/etc/NetworkManager/conf.d/
 cp configs/install_dnsproxy.sh ${CHROOT}
 cp scripts/setup.sh ${CHROOT}
 
+# copy debs  setup.sh install
+cp debs/* ${CHROOT}/root/
+
 # Copy qemu static and run setup script in chroot
 cp /usr/bin/qemu-aarch64-static ${CHROOT}/usr/bin/
 chroot ${CHROOT} qemu-aarch64-static /bin/sh -c "/setup.sh"
