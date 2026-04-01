@@ -28,7 +28,7 @@ gpt.img10 : start=      212002, size=        1024, type=DEA0BA2C-CBDD-4805-B4F9-
 gpt.img11 : start=      213026, size=        2048, type=A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4, uuid=A983B7C4-FC3A-4F88-823E-91D5DB06337F, name="tz"
 gpt.img12 : start=      215074, size=        2048, type=400FFDCD-22E0-47E7-9A23-F16ED9382388, uuid=22675009-60A3-401F-8D3F-44CD32ED394C, name="aboot"
 gpt.img13 : start=      217122, size=      131072, type=20117F86-E985-4357-B9EE-374BC1D8487D, uuid=80780B1D-0FE1-27D3-23E4-9244E62F8C46, name="boot"
-gpt.img14 : start=      348194, size=        2015, type=1B81E7E6-F50D-419B-A739-2AEEF8DA3335, uuid=A7AB80E8-E9D1-E8CD-F157-93F69B1D141E, name="rootfs"
+gpt.img14 : start=      348194, size=        2015, type=1B81E7E6-F50D-419B-A739-2AEEF8DA3335, uuid=259764F8-E2CA-30ED-9978-F87AD7284E28, name="rootfs"
 EOF
 
 # create fastboot compatible partition image
