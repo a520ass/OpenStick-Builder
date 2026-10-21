@@ -55,9 +55,6 @@ jobs:
       - name: Create rootfs
         run: sudo sh -e scripts/debootstrap.sh
 
-      - name: Build gadget-tool
-        run: sudo sh -e scripts/build_gt.sh
-
       - name: Create images
         run: sudo sh -e scripts/build_images.sh
 
