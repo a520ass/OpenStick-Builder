@@ -53,8 +53,8 @@ cp configs/install_dnsproxy.sh ${CHROOT}
 cp scripts/setup.sh ${CHROOT}
 
 # Copy qemu static and run setup script in chroot
-cp /usr/bin/qemu-aarch64-static ${CHROOT}/usr/bin/
-chroot ${CHROOT} qemu-aarch64-static /bin/sh -c "/setup.sh"
+#cp /usr/bin/qemu-aarch64-static ${CHROOT}/usr/bin/
+chroot ${CHROOT} /bin/sh -c "/setup.sh"
 
 # cleanup
 for a in proc sys dev/pts dev run; do
@@ -63,7 +63,7 @@ done;
 
 rm ${CHROOT}/install_dnsproxy.sh
 rm -f ${CHROOT}/setup.sh
-rm -f ${CHROOT}/usr/bin/qemu-aarch64-static
+#rm -f ${CHROOT}/usr/bin/qemu-aarch64-static
 echo -n > ${CHROOT}/root/.bash_history
 
 echo ${HOST_NAME} > ${CHROOT}/etc/hostname
