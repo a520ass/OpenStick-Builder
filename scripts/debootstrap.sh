@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 CHROOT=${CHROOT=$(pwd)/rootfs}
-RELEASE=${RELEASE=noble}
+RELEASE=${RELEASE=resolute}
 HOST_NAME=${HOST_NAME=openstick}
 
 rm -rf ${CHROOT}
