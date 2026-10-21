@@ -12,8 +12,8 @@ scripts/extract_fw.sh
 echo "\nCreate rootfs\n"
 scripts/debootstrap.sh
 
-echo "\nBuild gadget-tools\n"
-scripts/build_gt.sh
+#echo "\nBuild gadget-tools\n"
+#scripts/build_gt.sh
 
 echo "\nCreate images\n"
 scripts/build_images.sh

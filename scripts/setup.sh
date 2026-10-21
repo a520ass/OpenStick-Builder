@@ -18,8 +18,6 @@ apt upgrade -qqy --with-new-pkgs
 apt install -qqy --no-install-recommends \
     build-essential \
     dnsmasq \
-    #libconfig15 \
-    #libconfig-dev \
     libc6-dev \
     linux-libc-dev \
     locales \
