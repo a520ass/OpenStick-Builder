@@ -93,9 +93,16 @@ chmod +x ${CHROOT}/usr/sbin/wifi-ap.sh
 
 cp -a scripts/msm-firmware-loader.sh ${CHROOT}/usr/sbin
 
-# install kernel
-wget -O - https://github.com/Mio-sha512/openstick-stuff/raw/refs/heads/main/builder-stuff/linux-postmarketos-qcom-msm8916-6.12.1-cpr.apk \
-    | tar xkzf - -C ${CHROOT} --exclude=.PKGINFO --exclude=.SIGN* 2>/dev/null
+# install targz kernel
+wget https://github.com/a520ass/Actions-build/releases/download/Linux_Kernel_2026.10.26-0904/linux-7.3.0-msm8916-arm64.tar.gz
+tar -xzf linux-7.3.0-msm8916-arm64.tar.gz -C ${CHROOT}/root/ 2>/dev/null
+mkdir -p ${CHROOT}/boot/dtbs/qcom/
+cp -rfpa ${CHROOT}/root/boot/vmlinuz-7.3.0-msm8916 ${CHROOT}/boot/vmlinuz
+cp -rfpa ${CHROOT}/root/boot/dtbs/7.3.0-msm8916/qcom/msm8916-thwc*.dtb ${CHROOT}/boot/dtbs/qcom/
+mkdir -p ${CHROOT}/usr/lib/modules/
+cp -rfpa ${CHROOT}/root/lib/modules/* ${CHROOT}/usr/lib/modules/
+rm -rf ${CHROOT}/root/boot
+rm -rf ${CHROOT}/root/lib
 
 mkdir -p ${CHROOT}/boot/extlinux
 cp configs/extlinux.conf ${CHROOT}/boot/extlinux
